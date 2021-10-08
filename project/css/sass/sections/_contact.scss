@@ -1,0 +1,115 @@
+.contact-us {
+    background: url('../images/port-815.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 8px solid $defaultColor;
+    .overlay {
+        @extend %overlay;
+    }
+    .contact-header {
+        color: $flatFFF;
+        font-weight: 600px;
+        font-size: 28px;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 9999;
+    }
+    .contact-info {
+        position: relative;
+        z-index: 9999;
+        ul {
+            @extend %center-flex;
+            margin: 0;
+            padding: 0;
+            @media #{$maxMobile} {
+                flex-direction: column;
+            }
+            li {
+                color: $flatFFF;
+                padding: 15px;
+                span {
+                    margin-right: 6px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+.connect {
+    background-color: $flatblack2;
+    padding: 20px 10px;
+    @extend %hidden;
+    .connect-cont,
+    .follow {
+        > div {
+            h3 {
+                color: $flatFFF;
+                position: relative;
+                padding-bottom: 10px;
+                margin-bottom: 25px;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 10%;
+                    height: 2px;
+                    background-color: $flatFFF;
+                }
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    color: $flatFFF;
+                    margin-bottom: 10px;
+                    span {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        &.follow {
+            @media #{$maxMobile} {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            ul {
+                display: flex;
+                li {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 8px;
+                    @extend %radius50;
+                    @extend %center-flex;
+                    &:first-of-type {
+                        background-color: $faceColor;
+                    }
+                    &:nth-of-type(2) {
+                        background-color: $twitterColor;
+                    }
+                    &:last-of-type {
+                        background-color: $tubeColor;
+                    }
+                    &:hover {
+                        opacity: .8;
+                    }
+                    a {
+                        i {
+                            color: $flatFFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .map {
+        > div {
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+}

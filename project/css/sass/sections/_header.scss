@@ -1,0 +1,42 @@
+.header {
+    @extend %hidden;
+    position: relative;
+    .overlay {
+        @extend %overlay;
+    }
+    .caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 85%;
+        transform: translate(-50%, -45%);
+        color: $flatFFF;
+        z-index: 99;
+        h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 19px;
+        }
+        .contact {
+            padding: 10px 30px;
+            margin-top: 20px;
+            a {
+                color: $flatFFF;
+            }
+        }
+    }
+    .carousel-special {
+        padding: 0;
+        height: 100vh;
+        @media #{$maxExtraMobile} {
+            height: 900px;
+        }
+        .carousel,
+        .carousel-inner,
+        .carousel-item,
+        img {
+            height: 100%;
+        }
+    }
+}

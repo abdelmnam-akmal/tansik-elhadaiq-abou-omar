@@ -1,0 +1,54 @@
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    background-color: $flatFFF;
+    &.shadow-nav {
+        box-shadow: 7px -1px 9px 2px $iconColor;
+    }
+    .title-web {
+        @media #{$maxMobile} {
+            margin-bottom: 20px;
+        }
+        a {
+            color: $defaultColor;
+            font-size: 22px;
+            @extend %weight600;
+        }
+    }
+    .links-contact {
+        > ul {
+            @extend %center-flex;
+            margin: 0;
+            padding: 0;
+            li {
+                width: 30px;
+                height: 30px;
+                margin-right: 8px;
+                border-radius: 50%;
+                @extend %center-flex;
+                &:first-of-type {
+                    background-color: $faceColor;
+                }
+                &:nth-of-type(2) {
+                    background-color: $twitterColor;
+                }
+                &:last-of-type {
+                    background-color: $tubeColor;
+                }
+                &:hover {
+                    opacity: .8;
+                }
+                a {
+                    i {
+                        color: $flatFFF;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.services {
+    background-color: $flatEF;
+    padding-top: 50px;
+    .header-serv {
+        margin-bottom: 40px;
+        color: $headerColor;
+        font-size: 28px;
+        @extend %weight600;
+    }
+    .serv-cont {
+        > div {
+            display: flex;
+            padding: 15px;
+            .icon-serv {
+                margin-left: 20px;
+                i {
+                    font-size: 55px;
+                    color: $iconColor;
+                }
+            }
+            .desc-serv {
+                h5 {
+                    color: $flat72;
+                    font-weight: 500;
+                }
+                p {
+                    color: $iconColor;
+                    font-size: 14px;
+                }
+            }
+        }
+        &:nth-of-type(n+4) {
+            > div {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
